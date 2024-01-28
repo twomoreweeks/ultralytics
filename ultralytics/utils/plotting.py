@@ -502,7 +502,7 @@ class Annotator:
             det_label (str): Detection label text
             track_label (str): Tracking label text
         """
-        cv2.polylines(self.im, [np.int32([mask])], isClosed=True, color=mask_color, thickness=2)
+        cv2.polylines(self.im, [np.int32([mask])], isClosed=True, color=mask_color, thickness=1)
 
         #label = f"Track ID: {track_label}" if track_label else det_label
         label = f"{track_label}" if track_label else det_label
