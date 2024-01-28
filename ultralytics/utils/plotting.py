@@ -504,7 +504,8 @@ class Annotator:
         """
         cv2.polylines(self.im, [np.int32([mask])], isClosed=True, color=mask_color, thickness=2)
 
-        label = f"Track ID: {track_label}" if track_label else det_label
+        #label = f"Track ID: {track_label}" if track_label else det_label
+        label = f"{track_label}" if track_label else det_label
         text_size, _ = cv2.getTextSize(label, 0, 0.7, 1)
 
         cv2.rectangle(
